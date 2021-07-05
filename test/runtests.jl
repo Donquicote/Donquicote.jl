@@ -22,3 +22,8 @@ println("Schroeder (built-in):")
 @btime find_zero((f, D(f), D(D(f))), 2, Roots.Schroeder(); xatol = 1e-7)
 println("Schroeder (custom):")
 @btime schroeder(f, D(f), D(D(f)), 2)
+
+##
+
+V = ones(3)
+V0 = zeros(V)

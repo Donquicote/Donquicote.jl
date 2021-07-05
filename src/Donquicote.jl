@@ -1,6 +1,8 @@
 module Donquicote
 
-using PrettyTables, Statistics, StatsBase
+using PrettyTables, Statistics, StatsBase, ForwardDiff
+
+D(f) = x -> ForwardDiff.derivative(f,float(x))
 
 function newton(f, ∂f, x0; xatol = 1e-7)
 
